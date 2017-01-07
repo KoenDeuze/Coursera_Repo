@@ -4,18 +4,18 @@ The R-script run_analysis.r does the following:
 
  
 ## GLOBAL SETTINGS##
-1a. Set the working directory
-1b. load necessary packages
+- Set the working directory
+- load necessary packages
 
 ## TASK: MERGE THE TRAINING AND TEST SETS TO CREATE ONE DATA SET##
-2a. load the train data in 3 tables
-2b. load the test data in 3 tables
-2c. merge the 3 tables by row binding
-2d. set the variable names of subject and labels
-2e. set the variable names of the data
-2f. load the variable names
-2g. set the variable names
-2h. merge the datasets
+- load the train data in 3 tables
+- load the test data in 3 tables
+- merge the 3 tables by row binding
+- set the variable names of subject and labels
+- set the variable names of the data
+- load the variable names
+- set the variable names
+- merge the datasets
 
 
 ## TASK: EXTRACT ONLY THE MEASUREMENTS ON THE MEAN AND STANDARD DEVIATION##
