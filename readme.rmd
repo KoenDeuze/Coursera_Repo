@@ -19,27 +19,27 @@ The R-script run_analysis.r does the following:
 
 
 ## TASK: EXTRACT ONLY THE MEASUREMENTS ON THE MEAN AND STANDARD DEVIATION##
-3a. define which columns have the word mean() or std() in them
-3b. subset 'data' leaving the names from subfeatures, the subject and the activity
+- define which columns have the word mean() or std() in them
+- subset 'data' leaving the names from subfeatures, the subject and the activity
 
 ## TASK: name the activities (descriptive) in the dataset##
-4a. read the descriptive activity names from activity_labels.txt
-4b. name the variables to join them with the allData_mean_stad table
-4c. merge the two files on activity
-4d. change some headers
-4e. factorize the activity column
+- read the descriptive activity names from activity_labels.txt
+- name the variables to join them with the allData_mean_stad table
+- merge the two files on activity
+- change some headers
+- factorize the activity column
 
 ## TASK: label the dataset with descriptive variable names##
-5a. when the variablename start with a f it means frequency
-5b. Acc = Accelerator
-5c. Mag = Magnitude
-5d. Gyro = Gyroscope
+- when the variablename start with a f it means frequency
+- Acc = Accelerator
+- Mag = Magnitude
+- Gyro = Gyroscope
 
 ## TASK: create a second independent tidy dataset with the average for each variable, for each activity for each subject##
-6a. first also factorize subject
-6b. transform allData_mean_std to a data table
-6c. create the new tidy dataset with means for alle variables per subject and activity
-6d. write to a file
+- first also factorize subject
+- transform allData_mean_std to a data table
+- create the new tidy dataset with means for alle variables per subject and activity
+- write to a file
 
 
 
