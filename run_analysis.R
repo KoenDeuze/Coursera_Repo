@@ -46,5 +46,38 @@ subsetfeatures <- features$V2[grep("mean\\(\\)|std\\(\\)",features$V2)]
 columnnames <- c(as.character(subsetfeatures),"subject","activity")
 allData_mean_std <- subset(allData,select=columnnames)
 
+## TASK 3: name the activities (descriptive) in the dataset
+## _________________________________________________________
+
+# read the descriptive activity names from activity_labels.txt
+activityNames <- read.table("UCI HAR Dataset/activity_labels.txt",head=FALSE)
+# name the variables to join them with the allData_mean_stad table
+setnames(activityNames,names(activityNames),c("activity","description"))
+
+# merge the two files on activity
+allData_mean_std <- merge(activityNames,allData_mean_std,by="activity",all.x = TRUE)
+
+# change some headers
+setnames(allData_mean_std, "activity", "activity_id")
+setnames(allData_mean_std, "description", "activity")
+
+#factorize the activity column
+allData_mean_std$activity <- factor(allData_mean_std$activity)
+
+## TASK 4: label the dataset with descriptive variable names
+## ______________________________________________________________
+
+## when the variablename start with a f it means frequency
+names(allData_mean_std) <- gsub("^f","Frequency",names(allData_mean_std))
+##  Acc = Accelerator
+names(allData_mean_std) <- gsub("Acc","Accelerator",names(allData_mean_std))
+## Mag = Magnitude
+names(allData_mean_std) <- gsub("Mag","Magnitude",names(allData_mean_std))
+## Gyro = Gyroscope
+names(allData_mean_std) <- gsub("Gyro","Gyroscope",names(allData_mean_std))
+
+## TASK 5: create a second independent tidy dataset with the average for each variable, for each activity for each subject
+## _______________________________________________________________________________________________________________________
+
 
 
